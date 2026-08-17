@@ -71,17 +71,34 @@ function Skills() {
 
       <div className="mx-auto w-full">
 
-        <div className="rounded-3xl mx-10 border-y border-[#38BDF8]/30 bg-[#0B1020]/50 px-6 py-8 backdrop-blur-xl shadow-[0_0_50px_rgba(56,189,248,0.06)] sm:px-8 sm:py-10">
+        <div
+          className="
+            mx-0 rounded-3xl
+            border-y border-[#38BDF8]/30
+            bg-[#0B1020]/50
+            px-3 py-6
+            backdrop-blur-xl
+            shadow-[0_0_50px_rgba(56,189,248,0.06)]
+            sm:mx-10 sm:px-8 sm:py-10
+          "
+        >
 
           {/* Cards */}
 
-          <div className="grid grid-cols-2 justify-items-center gap-5 sm:gap-6 lg:grid-cols-6">
+          <div className="grid grid-cols-2 justify-items-center gap-3 sm:gap-6 lg:grid-cols-6">
 
             {visibleSkills.map((skill) => (
 
               <div
                 key={skill.name}
-                className="group flex h-[200px] w-[170px] flex-col items-center justify-center rounded-2xl border px-5 transition-all duration-300 hover:-translate-y-2"
+                className="
+                  group flex h-[160px] w-full max-w-[145px]
+                  flex-col items-center justify-center
+                  rounded-2xl border px-2
+                  transition-all duration-300
+                  hover:-translate-y-2
+                  sm:h-[200px] sm:w-[170px] sm:max-w-none sm:px-5
+                "
                 style={{
                   backgroundColor: skill.bg,
                   borderColor: `${skill.color}40`,
@@ -91,7 +108,14 @@ function Skills() {
                 {/* Logo */}
 
                 <div
-                  className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold transition-transform duration-300 group-hover:scale-110 sm:mb-6 sm:h-16 sm:w-16 sm:text-xl"
+                  className="
+                    mb-4 flex h-12 w-12
+                    items-center justify-center
+                    rounded-2xl text-lg font-bold
+                    transition-transform duration-300
+                    group-hover:scale-110
+                    sm:mb-6 sm:h-16 sm:w-16 sm:text-xl
+                  "
                   style={{
                     backgroundColor: `${skill.color}18`,
                     color: skill.color,
@@ -99,6 +123,7 @@ function Skills() {
                 >
                   {skill.name.charAt(0)}
                 </div>
+
 
                 {/* Name */}
 
@@ -126,7 +151,19 @@ function Skills() {
 
           <button
             onClick={() => setShowAll(!showAll)}
-            className="rounded-full border border-[#38BDF8]/40 bg-[#38BDF8]/10 px-7 py-3 text-sm font-semibold text-[#38BDF8] transition-all duration-300 hover:-translate-y-1 hover:border-[#38BDF8] hover:bg-[#38BDF8]/15 hover:shadow-[0_0_25px_rgba(56,189,248,0.2)]"
+            className="
+              rounded-full
+              border border-[#38BDF8]/40
+              bg-[#38BDF8]/10
+              px-7 py-3
+              text-sm font-semibold
+              text-[#38BDF8]
+              transition-all duration-300
+              hover:-translate-y-1
+              hover:border-[#38BDF8]
+              hover:bg-[#38BDF8]/15
+              hover:shadow-[0_0_25px_rgba(56,189,248,0.2)]
+            "
           >
             {showAll ? "Show Less" : "Show All"}
           </button>

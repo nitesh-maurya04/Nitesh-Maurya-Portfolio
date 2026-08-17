@@ -1,86 +1,6 @@
-import { useLayoutEffect, useRef } from "react"
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-
-gsap.registerPlugin(ScrollTrigger)
-
-
 function Project() {
-
-  const projectRef = useRef(null)
-
-  const card1Ref = useRef(null)
-  const card2Ref = useRef(null)
-  const card3Ref = useRef(null)
-
-
-  useLayoutEffect(() => {
-
-    const ctx = gsap.context(() => {
-
-      // ==============================
-      // Card 1 → Left side se
-      // ==============================
-
-      gsap.from(card1Ref.current, {
-        left: -150,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-
-        scrollTrigger: {
-          trigger: projectRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
-      })
-
-
-      // ==============================
-      // Card 2 → Only Fade
-      // ==============================
-
-      gsap.from(card2Ref.current, {
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-
-        scrollTrigger: {
-          trigger: projectRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
-      })
-
-
-      // ==============================
-      // Card 3 → Right side se
-      // ==============================
-
-      gsap.from(card3Ref.current, {
-        left: 150,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out",
-
-        scrollTrigger: {
-          trigger: projectRef.current,
-          start: "top 70%",
-          toggleActions: "play none none none",
-        },
-      })
-
-    }, projectRef)
-
-
-    return () => ctx.revert()
-
-  }, [])
-
-
   return (
     <section
-      ref={projectRef}
       id="projects"
       className="relative scroll-mt-24 px-6 py-16 sm:px-10 lg:px-16"
     >
@@ -108,7 +28,6 @@ function Project() {
         {/* ================= CARD 1 ================= */}
 
         <div
-          ref={card1Ref}
           className="
             group relative mx-auto aspect-[3/4] w-[90%] max-w-[320px]
             rounded-[1.5rem] bg-[#182A3A] p-6
@@ -159,7 +78,6 @@ function Project() {
         {/* ================= CARD 2 ================= */}
 
         <div
-          ref={card2Ref}
           className="
             group mx-auto aspect-[3/4] w-[90%] max-w-[320px]
             rounded-[1.5rem] bg-white p-6
@@ -210,7 +128,6 @@ function Project() {
         {/* ================= CARD 3 ================= */}
 
         <div
-          ref={card3Ref}
           className="
             group relative mx-auto aspect-[3/4] w-[90%] max-w-[320px]
             rounded-[1.5rem]
@@ -218,7 +135,8 @@ function Project() {
             p-6
             transition-all duration-500 ease-out
             hover:-translate-y-3 hover:scale-[1.02]
-            hover:shadow-[0_0_40px_rgba(34,197,94,0.90)]          "
+            hover:shadow-[0_0_40px_rgba(34,197,94,0.90)]
+          "
         >
 
           <div className="flex h-full -translate-y-6 flex-col items-center justify-center text-center">
@@ -257,7 +175,6 @@ function Project() {
           </div>
 
         </div>
-
 
       </div>
 

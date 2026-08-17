@@ -14,13 +14,13 @@ import Design from './components/design'
 
 function App() {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden">
 
       <Design />
 
       <Navbar />
 
-      <main className="relative z-10">
+      <main className="relative z-10 w-full max-w-full">
         <Hero />
         <About />
         <Skills />
