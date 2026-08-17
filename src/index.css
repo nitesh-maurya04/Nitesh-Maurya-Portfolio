@@ -1,0 +1,233 @@
+/* =========================================================
+   src/index.css
+========================================================= */
+
+
+/* =========================================================
+   IMPORTS
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Kumar+One&family=Moon+Dance&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+
+/* =========================================================
+   ROOT VARIABLES
+========================================================= */
+
+:root {
+  --hue: 140;
+}
+
+
+/* =========================================================
+   GLOBAL / BODY
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: 'Space Grotesk', sans-serif;
+
+  background: #050914;
+
+  color: #F5F5F5;
+  overflow-x: hidden;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+section {
+  width: 100%;
+  position: relative;
+}
+
+
+/* =========================================================
+   CUSTOM FONTS
+========================================================= */
+
+.font-kumar {
+  font-family: 'Kumar One', cursive;
+}
+
+.font-dm {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-bowlby {
+  font-family: 'Bowlby One SC', cursive;
+}
+
+.font-moon {
+  font-family: 'Moon Dance', cursive;
+}
+
+
+/* =========================================================
+   HIDE SCROLLBAR
+========================================================= */
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   SEE MORE / GENERAL SPIN
+========================================================= */
+
+@keyframes spinSlow {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+.animate-spin-slow {
+  animation: spinSlow 12s linear infinite;
+}
+
+
+/* =========================================================
+   STAR SPARKLES
+========================================================= */
+
+.star {
+  position: absolute;
+
+  width: 3px;
+  height: 3px;
+
+  border-radius: 9999px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 6px rgba(255, 255, 255, 0.9),
+    0 0 12px rgba(56, 189, 248, 0.8);
+
+  opacity: 0;
+
+  animation: sparkle 4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   STAR POSITIONS
+========================================================= */
+
+.star-1 {
+  top: 12%;
+  left: 18%;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 20%;
+  left: 72%;
+  animation-delay: 1.5s;
+}
+
+.star-3 {
+  top: 32%;
+  left: 88%;
+  animation-delay: 3s;
+}
+
+.star-4 {
+  top: 42%;
+  left: 12%;
+  animation-delay: 0.8s;
+}
+
+.star-5 {
+  top: 50%;
+  left: 65%;
+  animation-delay: 2.2s;
+}
+
+.star-6 {
+  top: 58%;
+  left: 30%;
+  animation-delay: 3.5s;
+}
+
+.star-7 {
+  top: 68%;
+  left: 82%;
+  animation-delay: 1.2s;
+}
+
+.star-8 {
+  top: 76%;
+  left: 15%;
+  animation-delay: 2.8s;
+}
+
+.star-9 {
+  top: 84%;
+  left: 55%;
+  animation-delay: 0.5s;
+}
+
+.star-10 {
+  top: 28%;
+  left: 45%;
+  animation-delay: 3.8s;
+}
+
+.star-11 {
+  top: 62%;
+  left: 92%;
+  animation-delay: 1.8s;
+}
+
+.star-12 {
+  top: 90%;
+  left: 38%;
+  animation-delay: 2.5s;
+}
+
+
+/* =========================================================
+   STAR SPARKLE ANIMATION
+========================================================= */
+
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+}
