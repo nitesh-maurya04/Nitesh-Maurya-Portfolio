@@ -220,7 +220,7 @@ function About() {
       </div>
 
        {/* ================= PHILOSOPHY ================= */}
-          <div className="w-full mx-10">
+          <div className="w-full">
             <div className="mt-10 w-full border-l-2 border-[#38BDF8]/60 pl-5">
 
               <p className="text-sm uppercase tracking-[0.15em] text-gray-500">

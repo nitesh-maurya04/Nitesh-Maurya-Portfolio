@@ -30,7 +30,7 @@ function Navbar() {
       className="sticky top-0 z-50 flex items-center justify-between border-b border-white/10 bg-[#0B1020]/60 px-4 py-3 text-white backdrop-blur-lg pl-6 sm:pl-16 pr-6 sm:pr-16 sm:px-24 sm:py-5"
     >
       {/* Logo */}
-      <h1 className="shrink-0 whitespace-nowrap text-[16px] font-semibold sm:text-[25px]">
+      <h1 className="shrink-0 whitespace-nowrap text-[12px] font-semibold sm:text-[25px]">
         NITESH MAURYA
       </h1>
 
@@ -57,7 +57,7 @@ function Navbar() {
         </a>
 
         <a href="#contact">
-          <button className="rounded-full bg-green-400 px-3 py-1.5 text-[11px] font-semibold text-black hover:bg-green-300 hover:shadow-[0_0_25px_rgba(74,222,128,0.4)] sm:px-6 sm:py-2.5 sm:text-sm">
+          <button className="rounded-full bg-green-400 px-2.5 py-1 text-[9px] font-semibold text-black hover:bg-green-300 hover:shadow-[0_0_25px_rgba(74,222,128,0.4)] sm:px-6 sm:py-2.5 sm:text-[20px]">
             Contact
           </button>
         </a>

@@ -91,7 +91,7 @@ function Skills() {
                 {/* Logo */}
 
                 <div
-                  className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl text-xl font-bold transition-transform duration-300 group-hover:scale-110"
+                  className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl text-lg font-bold transition-transform duration-300 group-hover:scale-110 sm:mb-6 sm:h-16 sm:w-16 sm:text-xl"
                   style={{
                     backgroundColor: `${skill.color}18`,
                     color: skill.color,
@@ -103,7 +103,7 @@ function Skills() {
                 {/* Name */}
 
                 <h3
-                  className="text-center text-base font-semibold sm:text-lg"
+                  className="text-center text-sm font-semibold sm:text-lg"
                   style={{
                     color: skill.color,
                   }}
